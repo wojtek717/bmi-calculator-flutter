@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'RCard.dart';
+import 'IconContent.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InputPage extends StatefulWidget {
   @override
@@ -21,10 +23,18 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                     child: RepCard(
                   color: Color(0xFF1D1E33),
+                  child: IconContent(
+                    icon: FontAwesomeIcons.mars,
+                    label: 'MALE',
+                  ),
                 )),
                 Expanded(
                   child: RepCard(
                     color: Color(0xFF1D1E33),
+                    child: IconContent(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
+                    ),
                   ),
                 ),
               ],
