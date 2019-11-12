@@ -18,24 +18,35 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Row(
               children: <Widget>[
-                Expanded(child: RepCard()),
                 Expanded(
-                  child: RepCard(),
+                    child: RepCard(
+                  color: Color(0xFF1D1E33),
+                )),
+                Expanded(
+                  child: RepCard(
+                    color: Color(0xFF1D1E33),
+                  ),
                 ),
               ],
             ),
           ),
           Expanded(
-            child: RepCard(),
+            child: RepCard(
+              color: Color(0xFF1D1E33),
+            ),
           ),
           Expanded(
             child: Row(
               children: <Widget>[
                 Expanded(
-                  child: RepCard(),
+                  child: RepCard(
+                    color: Color(0xFF1D1E33),
+                  ),
                 ),
                 Expanded(
-                  child: RepCard(),
+                  child: RepCard(
+                    color: Color(0xFF1D1E33),
+                  ),
                 ),
               ],
             ),
