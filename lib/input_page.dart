@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'RCard.dart';
 import 'IconContent.dart';
 import 'styles.dart';
+import 'RoundIconButton.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 enum gender { male, female }
@@ -16,6 +17,8 @@ class _InputPageState extends State<InputPage> {
   Color femaleCardColor = kInactiveCardColor;
   gender selectedGender;
   int height = 180;
+  int weight = 60;
+  int age = 20;
 
   @override
   Widget build(BuildContext context) {
@@ -109,20 +112,89 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: RepCard(
                     color: kActiveCardColor,
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          'WEIGHT',
+                          style: kIconTextStyle,
+                        ),
+                        Text(
+                          weight.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            RoundIconButton(
+                              onPress: (){
+                                setState(() {
+                                  weight++;
+                                });
+                              },
+                              icon: FontAwesomeIcons.plus,
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              onPress: (){
+                                setState(() {
+                                  weight--;
+                                });
+                              },
+                              icon: FontAwesomeIcons.minus,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: RepCard(
                     color: kActiveCardColor,
+                    child: Column(
+                      children: <Widget>[
+                        Text(
+                          'AGE',
+                          style: kIconTextStyle,
+                        ),
+                        Text(
+                          age.toString(),
+                          style: kNumberTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            RoundIconButton(
+                              onPress: (){
+                                setState(() {
+                                  age++;
+                                });
+                              },
+                              icon: FontAwesomeIcons.plus,
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            RoundIconButton(
+                              onPress: (){
+                                setState(() {
+                                  age--;
+                                });
+                              },
+                              icon: FontAwesomeIcons.minus,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
           ),
         ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
       ),
     );
   }

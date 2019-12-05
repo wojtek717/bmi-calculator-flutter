@@ -7,9 +7,11 @@ const kActiveColor = Color(0xFFEB1555);
 const kActiveTranspColor = Color(0x30EB1555);
 const kInActiveColor = Color(0xFF8D8E98);
 
+const kTextColor = Color(0xFF4C4F5E);
+
 const kIconTextStyle = TextStyle(
   fontSize: 22.0,
-  color: Colors.white,
+  color: kTextColor,
 );
 
 const kNumberTextStyle = TextStyle(
