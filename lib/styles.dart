@@ -38,7 +38,13 @@ const kTitleResult = TextStyle(
   color: Colors.white,
 );
 
-const kResultTextStyle = TextStyle(
+const kResultSubTitleTextStyle = TextStyle(
   fontSize: 28.0,
   color: kActiveColor,
+  fontWeight: FontWeight.w500
+);
+
+const kResultTextStyle = TextStyle(
+  fontSize: 18.0,
+  color: Colors.white,
 );

@@ -16,7 +16,7 @@ class ResultPage extends StatelessWidget {
             Container(
               margin: EdgeInsets.all(15.0),
               child: Text(
-                "Your Resoult:",
+                "Your Result:",
                 style: kTitleResult,
               ),
             ),
@@ -29,13 +29,16 @@ class ResultPage extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       'NORMAL',
-                      style: kResultTextStyle,
+                      style: kResultSubTitleTextStyle,
                     ),
                     Text(
                       '20.0',
                       style: kNumberBigTextStyle,
                     ),
-                    Text('text text text text'),
+                    Text(
+                      'text text text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text text',
+                      style: kResultTextStyle,
+                    ),
                   ],
                 ),
               ),
@@ -43,7 +46,7 @@ class ResultPage extends StatelessWidget {
             BottomButton(
               color: kActiveColor,
               text: Text(
-                'Calculate',
+                'Re-Calculate',
                 style: kButtonTextStyle,
               ),
               onPress: () {
