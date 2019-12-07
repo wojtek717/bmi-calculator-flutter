@@ -126,7 +126,7 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             RoundIconButton(
-                              onPress: (){
+                              onPress: () {
                                 setState(() {
                                   weight++;
                                 });
@@ -137,7 +137,7 @@ class _InputPageState extends State<InputPage> {
                               width: 10.0,
                             ),
                             RoundIconButton(
-                              onPress: (){
+                              onPress: () {
                                 setState(() {
                                   weight--;
                                 });
@@ -167,7 +167,7 @@ class _InputPageState extends State<InputPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             RoundIconButton(
-                              onPress: (){
+                              onPress: () {
                                 setState(() {
                                   age++;
                                 });
@@ -178,7 +178,7 @@ class _InputPageState extends State<InputPage> {
                               width: 10.0,
                             ),
                             RoundIconButton(
-                              onPress: (){
+                              onPress: () {
                                 setState(() {
                                   age--;
                                 });
@@ -192,6 +192,24 @@ class _InputPageState extends State<InputPage> {
                   ),
                 ),
               ],
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushNamed(context, '/result');
+            },
+            child: Container(
+              child: Center(
+                child: Text(
+                  'Calculate',
+                  style: kButtonTextStyle,
+                ),
+              ),
+              color: Color(0xFFEB1555),
+              margin: EdgeInsets.only(top: 10.0),
+              width: double.infinity,
+              height: 90.0,
+              padding: EdgeInsets.only(bottom: 15.0),
             ),
           ),
         ],
