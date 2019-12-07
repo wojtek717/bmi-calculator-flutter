@@ -20,8 +20,25 @@ const kNumberTextStyle = TextStyle(
   color: Colors.white,
 );
 
+const kNumberBigTextStyle = TextStyle(
+  fontSize: 95.0,
+  fontWeight: FontWeight.w700,
+  color: Colors.white,
+);
+
 const kButtonTextStyle = TextStyle(
   fontSize: 25.0,
   fontWeight: FontWeight.bold,
   color: Colors.white,
+);
+
+const kTitleResult = TextStyle(
+  fontSize: 50.0,
+  fontWeight: FontWeight.bold,
+  color: Colors.white,
+);
+
+const kResultTextStyle = TextStyle(
+  fontSize: 28.0,
+  color: kActiveColor,
 );

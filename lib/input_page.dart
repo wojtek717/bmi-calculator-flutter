@@ -4,6 +4,7 @@ import 'IconContent.dart';
 import 'styles.dart';
 import 'RoundIconButton.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'BottomButton.dart';
 
 enum gender { male, female }
 
@@ -194,24 +195,16 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () {
+          BottomButton(
+            color: kActiveColor,
+            text: Text(
+              'Calculate',
+              style: kButtonTextStyle,
+            ),
+            onPress: () {
               Navigator.pushNamed(context, '/result');
             },
-            child: Container(
-              child: Center(
-                child: Text(
-                  'Calculate',
-                  style: kButtonTextStyle,
-                ),
-              ),
-              color: Color(0xFFEB1555),
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: 90.0,
-              padding: EdgeInsets.only(bottom: 15.0),
-            ),
-          ),
+          )
         ],
       ),
     );
