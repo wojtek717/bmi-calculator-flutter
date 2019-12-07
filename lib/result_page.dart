@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'styles.dart';
 import 'RCard.dart';
 import 'BottomButton.dart';
+import 'CalculatorBrain.dart';
 
 class ResultPage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
+
+    final CalculatorBrain calculatorBrain = ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
         appBar: AppBar(
           title: Text('BMI CALCULATOR'),
@@ -32,7 +37,7 @@ class ResultPage extends StatelessWidget {
                       style: kResultSubTitleTextStyle,
                     ),
                     Text(
-                      '20.0',
+                      calculatorBrain.CalculateBMI(),
                       style: kNumberBigTextStyle,
                     ),
                     Text(

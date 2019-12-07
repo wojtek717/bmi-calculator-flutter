@@ -5,6 +5,7 @@ import 'styles.dart';
 import 'RoundIconButton.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'BottomButton.dart';
+import 'CalculatorBrain.dart';
 
 enum gender { male, female }
 
@@ -202,7 +203,9 @@ class _InputPageState extends State<InputPage> {
               style: kButtonTextStyle,
             ),
             onPress: () {
-              Navigator.pushNamed(context, '/result');
+              CalculatorBrain calc =
+                  CalculatorBrain(height: height, weight: weight);
+              Navigator.pushNamed(context, '/result', arguments: calc);
             },
           )
         ],
